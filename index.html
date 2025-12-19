@@ -2,13 +2,13 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>调试模式 - 工厂隐患寻宝</title>
+  <title>工厂隐患寻宝 - 正式版</title>
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
 </head>
 
 <body>
-  <a-scene mindar-image="imageTargetSrc: ./targets.mind; uiLoading:yes; uiError:yes; uiScanning:yes;" 
+  <a-scene mindar-image="imageTargetSrc: ./targets.mind; uiLoading:no; uiError:no; uiScanning:no;" 
            color-space="sRGB" 
            renderer="colorManagement: true, physicallyCorrectLights" 
            vr-mode-ui="enabled: false" 
@@ -22,12 +22,10 @@
 
     <a-entity mindar-image-target="targetIndex: 0">
       
-      <a-gltf-model rotation="0 0 0" position="0 0 0" scale="1 1 1" src="#avatarModel">
+      <a-gltf-model rotation="0 -90 0" position="0 0 0" scale="1 1 1" src="#avatarModel">
       </a-gltf-model>
 
-      <a-box position="0.5 0 0" scale="0.5 0.5 0.5" color="yellow"></a-box>
-
-      <a-text value="Debug Mode" color="red" position="0 0.4 0" scale="0.5 0.5 0.5" align="center"></a-text>
+      <a-text value="Safety Check!" color="red" position="0 0.4 0" scale="0.5 0.5 0.5" align="center"></a-text>
     </a-entity>
   </a-scene>
 </body>
